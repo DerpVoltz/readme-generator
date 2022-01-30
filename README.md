@@ -11,6 +11,8 @@
   To install this project all you have to do is clone the repository and then run the command "npm i" or "npm install" then you are all set.
   ## Usage
   When you have finished the installation steps you run "node index.js" and it will prompt you the questions for the README. After you are done with them a new readme with all that information will be created in the root folder.
+
+  [WalkThrough Video](https://watch.screencastify.com/v/dxv2HCC7yPHm9NCELs9b)
   ## License
   This repository is cover under the MIT License you can read about it at: [https://choosealicense.com/licenses/mit/](https://choosealicense.com/licenses/mit/)
   ## Questions
