@@ -70,12 +70,12 @@ const tests = (data, toc) => {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const license = data.license;
-  return `# ${data.title}  ${renderLicenseBadge(license)}
+  return `# ${data.title} ${renderLicenseBadge(license)}
   ## Description
   ${data.description}
   ## Table of Contents${installation(data, 'toc')}
   * [Usage](#Usage)${contributing(data, 'toc')}${tests(data, 'toc')}
-  ${renderLicenseSection(license, 'toc')}
+  * [License](#License)
   * [Questions](#Questions)
   ${installation(data)}
   ${data.installation}
@@ -83,6 +83,7 @@ function generateMarkdown(data) {
   ${data.usage}${contributing(data)}
   ${data.contributing}${tests(data)}
   ${data.tests}
+  ## License
   ${renderLicenseSection(license)}
   ## Questions
   You can contact me From;
