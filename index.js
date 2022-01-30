@@ -8,12 +8,28 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is your project name?'
+        message: 'What is your project name? (Required)',
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('Please enter the project name.');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'description',
-        message: 'What is your project description?'
+        message: 'What is your project description? (Required)',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            } else {
+                console.log('Please enter a description.');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
@@ -23,7 +39,15 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions and examples for use.'
+        message: 'Provide instructions and examples for use. (Required)',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            } else {
+                console.log('Please enter usage instructions');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
@@ -36,19 +60,47 @@ const questions = [
         message: 'Write some tests if you have any.'
     },
     {
+        type: 'list',
+        name: 'license',
+        choices: ['MIT License', 'GNU General Public License v3.0', 'Mozilla Public License 2.0']
+    },
+    {
         type: 'input',
         name: 'username',
-        message: 'What is your GitHub username?'
+        message: 'What is your GitHub username? (Required)',
+        validate: usernameInput => {
+            if (usernameInput) {
+                return true;
+            } else {
+                console.log('Please enter username.');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'github',
-        message: 'Give the link to your github profile'
+        message: 'Give the link to your github profile (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please give the link to your GitHub profile.')
+            }
+        }
     },
     {
         type: 'type',
         name: 'email',
-        message: 'What is your email address?'
+        message: 'What is your email address? (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+                return  true;
+            } else {
+                console.log('Please Enter email.');
+                return false;
+            }
+        }
     }
 ];
 
