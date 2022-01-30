@@ -24,62 +24,64 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license, toc) {
-  if (license && !toc) {
-    return `## License
-  ${renderLicenseBadge(license)}
-
-  This repository is cover under the ${license} you can read about it at: ${renderLicenseLink(license)}`
-  } else if (license, toc) {
-    return '* [License](#License)'
-  }
+function renderLicenseSection(license) {
+  return `This repository is cover under the ${license} you can read about it at: ${renderLicenseLink(license)}`;
 }
 
 const contributing = (data, toc) => {
-  if (data.contributing && !toc) {
-    return '## Contributing';
-  } else if (toc) {
-    return '* [Contributing](#Contributing)';
+  const contributing = data.contributing;
+  if (contributing && !toc) {
+    return `
+  ## Contributing`;
+  } else if (contributing && toc) {
+    return `
+  * [Contributing](#Contributing)`;
+  } else {
+    return '';
   }
 }
 
 const installation = (data, toc) => {
-  if (data.installation && !toc) {
-    return '## Installation';
-  } else if (toc) {
-    return '* [Installation](#Installation)';
+  const installation = data.installation;
+  if (installation && !toc) {
+    return `
+  ## Installation`;
+  } else if (installation && toc) {
+    return `
+  * [Installation](#Installation)`;
+  } else {
+    return'';
   }
 }
 
 const tests = (data, toc) => {
-  if (data.tests && !toc) {
-    return '## Tests';
-  } else if (toc) {
-    return '* [Tests](#Tests)';
+  const tests = data.tests
+  if (tests && !toc) {
+    return `
+  ## Tests`;
+  } else if (tests && toc) {
+    return `
+  * [Tests](#Tests)`;
+  } else {
+    return '';
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const license = data.license;
-  return `# ${data.title}
+  return `# ${data.title}  ${renderLicenseBadge(license)}
   ## Description
   ${data.description}
-  ## Table of Contents
-  ${installation(data, 'toc')}
-  * [Usage](#Usage)
-  ${contributing(data, 'toc')}
-  ${tests(data, 'toc')}
+  ## Table of Contents${installation(data, 'toc')}
+  * [Usage](#Usage)${contributing(data, 'toc')}${tests(data, 'toc')}
   ${renderLicenseSection(license, 'toc')}
   * [Questions](#Questions)
-
   ${installation(data)}
   ${data.installation}
   ## Usage
-  ${data.usage}
-  ${contributing(data)}
-  ${data.contributing}
-  ${tests(data)}
+  ${data.usage}${contributing(data)}
+  ${data.contributing}${tests(data)}
   ${data.tests}
   ${renderLicenseSection(license)}
   ## Questions

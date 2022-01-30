@@ -1,4 +1,4 @@
-# sda
+# dsa  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description
   dsa
   ## Table of Contents
@@ -6,9 +6,9 @@
   * [Usage](#Usage)
   * [Contributing](#Contributing)
   * [Tests](#Tests)
-  * [License](#License)
+  This repository is cover under the MIT License you can read about it at: [https://choosealicense.com/licenses/mit/](https://choosealicense.com/licenses/mit/)
   * [Questions](#Questions)
-
+  
   ## Installation
   dsa
   ## Usage
@@ -17,10 +17,7 @@
   dsa
   ## Tests
   dsa
-  ## License
-  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-
-  This repository is cover under the Mozilla Public License 2.0 you can read about it at: [https://choosealicense.com/licenses/mpl-2.0/](https://choosealicense.com/licenses/mpl-2.0/)
+  This repository is cover under the MIT License you can read about it at: [https://choosealicense.com/licenses/mit/](https://choosealicense.com/licenses/mit/)
   ## Questions
   You can contact me From;
 
